@@ -32,19 +32,20 @@
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nmEscalado = new System.Windows.Forms.NumericUpDown();
-            this.nmTraslacion = new System.Windows.Forms.NumericUpDown();
-            this.nmRotacion = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nmRotacion = new System.Windows.Forms.NumericUpDown();
+            this.nmTraslacion = new System.Windows.Forms.NumericUpDown();
+            this.nmEscalado = new System.Windows.Forms.NumericUpDown();
+            this.btnActivar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmEscalado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmTraslacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmRotacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmTraslacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmEscalado)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -90,6 +91,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnActivar);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -102,9 +104,66 @@
             this.panel1.Size = new System.Drawing.Size(288, 194);
             this.panel1.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(162, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 22);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Traslacion";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(162, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Rotacion";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(162, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Escalado";
+            // 
+            // nmRotacion
+            // 
+            this.nmRotacion.Enabled = false;
+            this.nmRotacion.Location = new System.Drawing.Point(13, 64);
+            this.nmRotacion.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nmRotacion.Name = "nmRotacion";
+            this.nmRotacion.Size = new System.Drawing.Size(120, 22);
+            this.nmRotacion.TabIndex = 2;
+            // 
+            // nmTraslacion
+            // 
+            this.nmTraslacion.Enabled = false;
+            this.nmTraslacion.Location = new System.Drawing.Point(13, 118);
+            this.nmTraslacion.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nmTraslacion.Name = "nmTraslacion";
+            this.nmTraslacion.Size = new System.Drawing.Size(120, 22);
+            this.nmTraslacion.TabIndex = 1;
+            // 
             // nmEscalado
             // 
-            this.nmEscalado.Location = new System.Drawing.Point(13, 39);
+            this.nmEscalado.Enabled = false;
+            this.nmEscalado.Location = new System.Drawing.Point(13, 14);
             this.nmEscalado.Maximum = new decimal(new int[] {
             5,
             0,
@@ -115,59 +174,16 @@
             this.nmEscalado.TabIndex = 0;
             this.nmEscalado.ValueChanged += new System.EventHandler(this.nmEscalado_ValueChanged);
             // 
-            // nmTraslacion
+            // btnActivar
             // 
-            this.nmTraslacion.Location = new System.Drawing.Point(13, 143);
-            this.nmTraslacion.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nmTraslacion.Name = "nmTraslacion";
-            this.nmTraslacion.Size = new System.Drawing.Size(120, 22);
-            this.nmTraslacion.TabIndex = 1;
-            // 
-            // nmRotacion
-            // 
-            this.nmRotacion.Location = new System.Drawing.Point(13, 89);
-            this.nmRotacion.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nmRotacion.Name = "nmRotacion";
-            this.nmRotacion.Size = new System.Drawing.Size(120, 22);
-            this.nmRotacion.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(162, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 22);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Escalado";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(162, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 22);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Rotacion";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(162, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Traslacion";
+            this.btnActivar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActivar.Location = new System.Drawing.Point(102, 159);
+            this.btnActivar.Name = "btnActivar";
+            this.btnActivar.Size = new System.Drawing.Size(93, 32);
+            this.btnActivar.TabIndex = 6;
+            this.btnActivar.Text = "Activar";
+            this.btnActivar.UseVisualStyleBackColor = true;
+            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
             // 
             // MainForm
             // 
@@ -182,9 +198,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmEscalado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmTraslacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmRotacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmTraslacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmEscalado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,6 +217,7 @@
         private System.Windows.Forms.NumericUpDown nmRotacion;
         private System.Windows.Forms.NumericUpDown nmTraslacion;
         private System.Windows.Forms.NumericUpDown nmEscalado;
+        private System.Windows.Forms.Button btnActivar;
     }
 }
 
