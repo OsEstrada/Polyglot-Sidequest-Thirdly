@@ -71,6 +71,7 @@
             this.picCanvas.Size = new System.Drawing.Size(998, 686);
             this.picCanvas.TabIndex = 0;
             this.picCanvas.TabStop = false;
+            this.picCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.picCanvas_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -112,6 +113,7 @@
             this.nmEscalado.Name = "nmEscalado";
             this.nmEscalado.Size = new System.Drawing.Size(120, 22);
             this.nmEscalado.TabIndex = 0;
+            this.nmEscalado.ValueChanged += new System.EventHandler(this.nmEscalado_ValueChanged);
             // 
             // nmTraslacion
             // 
