@@ -24,5 +24,11 @@ namespace Polyglot_Thirdly.Classes
                                     { -1*Convert.ToDecimal(Math.Round(Math.Sin(z))), Convert.ToDecimal(Math.Round(Math.Cos(z))) , 0 },
                                     { 0, 0, 1} };
         }
+        public static decimal[,] R_ClockWise(double z)
+        {
+            return new decimal[3, 3] { { Convert.ToDecimal(Math.Round(Math.Cos(z))), -1*Convert.ToDecimal(Math.Round(Math.Sin(z))), 0 },
+                                    { Convert.ToDecimal(Math.Round(Math.Sin(z))), Convert.ToDecimal(Math.Round(Math.Cos(z))) , 0 },
+                                    { 0, 0, 1} };
+        }
     }
 }
