@@ -1,22 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Polyglot_Thirdly.Classes
 {
     public class Cuadro
     {
-        public int Size { get; set; }
-        public Tuple<Point, Point> L1 { get; set; }
-        public Tuple<Point, Point> L2 { get; set; }
-        public Tuple<Point, Point> L3 { get; set; }
-        public Tuple<Point, Point> L4 { get; set; }
-        public Point[] GetPoints { get => Points; }
-        public Point[] GetRelativePoints { get => Points; }
+
         //Puntos reales que se graficaran en pantalla
         private Point[] Points;
         //Puntos en un sistema relativo centrado en 0, con y positiva hacia arriba.
@@ -24,6 +14,16 @@ namespace Polyglot_Thirdly.Classes
         private Graphics vector;
         private Pen pen;
         private PictureBox pictureBox;
+        //Tamaño original de una linea
+        public int OriginalSize { get; set; }
+        //Lineas
+        public Tuple<Point, Point> L1 { get; set; }
+        public Tuple<Point, Point> L2 { get; set; }
+        public Tuple<Point, Point> L3 { get; set; }
+        public Tuple<Point, Point> L4 { get; set; }
+        public Point[] GetPoints { get => Points; }
+        public Point[] GetRelativePoints { get => Points; }
+
 
         public Cuadro() { }
         public Cuadro(Point _p1, Point _p2, Point _p3, Point _p4, PictureBox pic)
@@ -49,15 +49,21 @@ namespace Polyglot_Thirdly.Classes
         public void SetRelativePoints()
         {
             RelativePoints[0].X = 0; RelativePoints[0].Y = 0;
-            RelativePoints[1].X = 0 + Size; RelativePoints[1].Y = 0;
-            RelativePoints[2].X = 0 + Size; RelativePoints[2].Y = 0 + Size;
-            RelativePoints[3].X = 0; RelativePoints[3].Y = 0 + Size;
+            RelativePoints[1].X = 0 + OriginalSize; RelativePoints[1].Y = 0;
+            RelativePoints[2].X = 0 + OriginalSize; RelativePoints[2].Y = 0 + OriginalSize;
+            RelativePoints[3].X = 0; RelativePoints[3].Y = 0 + OriginalSize;
         }
-
-        public void SetPoint(int i, int x, int y ,int[] r)
+        //Funcion para almacenar los puntos relativos en el indice i
+        public void SetRelativePoint(int i, int x, int y, decimal[] r)
         {
-            Points[i].X = x + r[0];
-            Points[i].Y = y - r[1];
+            RelativePoints[i].X = Convert.ToInt32(x + r[0]);
+            RelativePoints[i].Y = Convert.ToInt32(y + r[1]);
+        }
+        //Funcion para almacenar puntos reales en el indice i
+        public void SetPoint(int i, int x, int y ,decimal[] r)
+        {
+            Points[i].X = Convert.ToInt32( x + r[0]);
+            Points[i].Y = Convert.ToInt32( y - r[1]);
         }
 
         public Point GetPoint(int i)

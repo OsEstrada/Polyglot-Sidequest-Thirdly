@@ -8,3 +8,13 @@ C:\Users\Oscar Alejandro\source\repos\Polyglot-Thirdly\Polyglot-Thirdly\bin\Debu
 C:\Users\Oscar Alejandro\source\repos\Polyglot-Thirdly\Polyglot-Thirdly\bin\Debug\Polyglot-Thirdly.pdb
 C:\Users\Oscar Alejandro\source\repos\Polyglot-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot-Thirdly.exe
 C:\Users\Oscar Alejandro\source\repos\Polyglot-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot-Thirdly.pdb
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\bin\Debug\Polyglot-Thirdly.exe.config
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\bin\Debug\Polyglot-Thirdly.exe
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\bin\Debug\Polyglot-Thirdly.pdb
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot-Thirdly.csprojAssemblyReference.cache
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot_Thirdly.MainForm.resources
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot_Thirdly.Properties.Resources.resources
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot-Thirdly.csproj.GenerateResource.cache
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot-Thirdly.csproj.CoreCompileInputs.cache
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot-Thirdly.exe
+C:\Users\Oscar Alejandro\source\repos\Polyglot-Sidequest-Thirdly\Polyglot-Thirdly\obj\Debug\Polyglot-Thirdly.pdb

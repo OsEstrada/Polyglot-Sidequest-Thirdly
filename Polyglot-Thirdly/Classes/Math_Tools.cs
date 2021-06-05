@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polyglot_Thirdly.Classes
+﻿namespace Polyglot_Thirdly.Classes
 {
+    //Funciones con operaciones para matrices
     public static class Math_Tools
     {
-        public static void Zeroes(int[,] M, int n)
+        public static void Zeroes(decimal[,] M, int n)
         {
             for(int i = 0; i < n; i++)
                 for(int j = 0; j<n; j++)
@@ -17,23 +12,23 @@ namespace Polyglot_Thirdly.Classes
                 }
         }
 
-        public static void Zeroes(int[] V, int n)
+        public static void Zeroes(decimal[] V, int n)
         {
             for (int i = 0; i < n; i++)
                 V[i] = 0;
         }
 
-        public static int calculateMember(int i, int j, int r, int[,] A, int[,] B)
+        public static decimal calculateMember(int i, int j, int r, decimal[,] A, decimal[,] B)
         {
-            int member = 0;
+            decimal member = 0;
             for (int k = 0; k < r; k++)
                 member += A[i, k] * B[k, j];
             return member;
         }
 
-        public static int[,] productMatrixMatrix(int[,] A, int[,] B, int n, int r, int m)
+        public static decimal[,] productMatrixMatrix(decimal[,] A, decimal[,] B, int n, int r, int m)
         {
-            int[,] R = new int[3,3];
+            decimal[,] R = new decimal[3,3];
 
             Zeroes(R, n);
 
@@ -44,11 +39,11 @@ namespace Polyglot_Thirdly.Classes
             return R;
         }
 
-        public static void productMatrixVector(int[,] A, int[] v, int[] R, int n)
+        public static void productMatrixVector(decimal[,] A, decimal[] v, decimal[] R, int n)
         {
             for (int i = 0; i < n; i++)
             {
-                int cell = 0;
+                decimal cell = 0;
                 for (int c = 0; c < n; c++)
                 {
                     cell += A[i, c] * v[c];

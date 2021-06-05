@@ -32,13 +32,14 @@
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnActivar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.nmRotacion = new System.Windows.Forms.NumericUpDown();
             this.nmTraslacion = new System.Windows.Forms.NumericUpDown();
             this.nmEscalado = new System.Windows.Forms.NumericUpDown();
-            this.btnActivar = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -91,6 +92,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnActivar);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -103,6 +105,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 194);
             this.panel1.TabIndex = 0;
+            // 
+            // btnActivar
+            // 
+            this.btnActivar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActivar.Location = new System.Drawing.Point(31, 159);
+            this.btnActivar.Name = "btnActivar";
+            this.btnActivar.Size = new System.Drawing.Size(93, 32);
+            this.btnActivar.TabIndex = 6;
+            this.btnActivar.Text = "Activar";
+            this.btnActivar.UseVisualStyleBackColor = true;
+            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
             // 
             // label3
             // 
@@ -143,9 +156,20 @@
             0,
             0,
             0});
+            this.nmRotacion.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nmRotacion.Name = "nmRotacion";
             this.nmRotacion.Size = new System.Drawing.Size(120, 22);
             this.nmRotacion.TabIndex = 2;
+            this.nmRotacion.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmRotacion.ValueChanged += new System.EventHandler(this.nmRotacion_ValueChanged);
             // 
             // nmTraslacion
             // 
@@ -156,9 +180,20 @@
             0,
             0,
             0});
+            this.nmTraslacion.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nmTraslacion.Name = "nmTraslacion";
             this.nmTraslacion.Size = new System.Drawing.Size(120, 22);
             this.nmTraslacion.TabIndex = 1;
+            this.nmTraslacion.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmTraslacion.ValueChanged += new System.EventHandler(this.nmTraslacion_ValueChanged);
             // 
             // nmEscalado
             // 
@@ -169,21 +204,31 @@
             0,
             0,
             0});
+            this.nmEscalado.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nmEscalado.Name = "nmEscalado";
             this.nmEscalado.Size = new System.Drawing.Size(120, 22);
             this.nmEscalado.TabIndex = 0;
+            this.nmEscalado.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nmEscalado.ValueChanged += new System.EventHandler(this.nmEscalado_ValueChanged);
             // 
-            // btnActivar
+            // btnReset
             // 
-            this.btnActivar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActivar.Location = new System.Drawing.Point(102, 159);
-            this.btnActivar.Name = "btnActivar";
-            this.btnActivar.Size = new System.Drawing.Size(93, 32);
-            this.btnActivar.TabIndex = 6;
-            this.btnActivar.Text = "Activar";
-            this.btnActivar.UseVisualStyleBackColor = true;
-            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(149, 159);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(93, 32);
+            this.btnReset.TabIndex = 7;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // MainForm
             // 
@@ -218,6 +263,7 @@
         private System.Windows.Forms.NumericUpDown nmTraslacion;
         private System.Windows.Forms.NumericUpDown nmEscalado;
         private System.Windows.Forms.Button btnActivar;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
