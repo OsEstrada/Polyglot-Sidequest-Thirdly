@@ -94,6 +94,9 @@ namespace Polyglot_Thirdly
             }
         }
 
+        //OBSERVACION: Al intentar rotar hay algunos errores, por ejemplo, debido a que c# solo admite valores enteros para representar los puntos, a la hora de hacer los
+        //calculos asumo que hay un error, el cual a medida mas veces se rote aumenta. Se ve reflejado con el tamaño del cuerpo, otro error es que no logre hacer que rote
+        //solo el cuerpo, sino mas bien, que este rota alrededor del punto inicial (En el plano relativo seria el punto (0,0)
         //Metodo que calcula la rotacion, desde el punto inicial
         private void nmRotacion_ValueChanged(object sender, EventArgs e)
         {
